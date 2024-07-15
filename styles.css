@@ -1,0 +1,194 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Light gray background */
+    overflow: hidden; /* Prevent scrolling beyond viewport */
+    position: relative; /* Ensure relative positioning for children */
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background color for header with opacity */
+    color: #fff; /* White text color */
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Ensure z-index works properly */
+    z-index: 2; /* Bring header above background image */
+}
+
+.logo img {
+    max-width: 100px; /* Adjust as needed */
+}
+
+.header .icon {
+    font-size: 1.5rem; /* Adjust icon size */
+    margin-right: 1rem; /* Add margin for spacing */
+}
+
+.search {
+    flex: 1; /* Take remaining space */
+    margin: 0 1rem;
+}
+
+.search input[type="text"] {
+    width: 70%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+
+.search button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.user {
+    margin-right: 1rem;
+}
+
+.actions a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.main {
+    padding: 2rem;
+    position: relative; /* Ensure relative positioning for children */
+    z-index: 1; /* Ensure content is above background */
+    overflow-y: auto; /* Enable vertical scrolling for longer content */
+    max-height: calc(100vh - 120px); /* Adjust max-height based on header and footer height */
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bc1.gif'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) opacity(1.0); /* Optional: blur and opacity effect */
+    z-index: -1;
+}
+
+.upload-form {
+    margin-bottom: 2rem;
+}
+
+.upload-form input[type="text"], .upload-form input[type="file"] {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.upload-form button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.song-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    position: relative; /* Ensure z-index works properly */
+    z-index: 1; /* Bring content above background image */
+}
+
+.song-item {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.song-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.song-info {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.play-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background color for footer with opacity */
+    color: #fff; /* White text color */
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2; /* Ensure footer is above background image */
+}
+
+.social-icons {
+    margin-bottom: 0.5rem;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+}
+
+.social-icons i {
+    font-size: 1.5rem; /* Adjust icon size */
+    color: #fff; /* White icon color */
+}
+
+.copyright {
+    margin-top: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search {
+        margin: 1rem 0;
+    }
+
+    .search input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+    }
+}

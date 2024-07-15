@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Music App</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Example of including Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo"> <!-- Update logo.png with your actual logo path -->
+        </div>
+        <div class="search">
+            <input id="searchInput" type="text" placeholder="Search for a song...">
+            <button onclick="searchSong()">Search</button>
+        </div>
+        <div class="user">
+            <!-- If logged in, display username -->
+            <span>Welcome, User!</span>
+            <a href="#">Logout</a>
+        </div>
+        <div class="actions">
+            <!-- Adjusted icon class -->
+            <i class="icon fas fa-bars"></i> <!-- Example of using Font Awesome icon -->
+            <a href="#">Sign Up</a>
+            <a href="#">Login</a>
+        </div>
+    </header>
+
+    <!-- Body Section -->
+    <main class="main">
+        <div class="background-image"></div> <!-- Added div for background image -->
+        
+        <div class="upload-form">
+            <input id="songName" type="text" placeholder="Song Name">
+            <input id="artistName" type="text" placeholder="Artist Name">
+            <label for="songFile">Choose Track:</label>
+            <input id="songFile" type="file" accept="audio/*">
+            <label for="songImage">Choose Image:</label>
+            <input id="songImage" type="file" accept="image/*">
+            <button onclick="uploadSong()">Upload Song</button>
+        </div>
+        
+        <div class="song-list" id="songList">
+            <!-- Song list will be dynamically populated -->
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://github.com/highflyer8096"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Your Music App. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
